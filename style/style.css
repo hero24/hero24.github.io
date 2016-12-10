@@ -12,6 +12,7 @@ body {
 }
 nav {
   background-color: #57bdfb;
+  border-left: solid #ff5739 2px;
 }
 nav a{
   color: #ffdb00;
