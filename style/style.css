@@ -26,6 +26,7 @@ nav a:visited {
 }
 section {
   float:left;
+  width: 33%;
 }
 footer {
   float: clear;
