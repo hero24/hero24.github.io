@@ -31,4 +31,6 @@ section {
 }
 footer {
   float: clear;
+  position: absoulte;
+  bottom: 0;
 }
