@@ -8,8 +8,11 @@
  */
 body {
   background-color: #7bcdff;
-  text: #feff77
+  text-color: #feff77
 }
 nav {
   background-color: #57bdfb;
+}
+nav a{
+  text-color: #ffadfc;
 }
