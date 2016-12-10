@@ -10,7 +10,10 @@ http://www.color-hex.com/color-palette/27361
  */
 body {
   background-color: #7bcdff;
-  color: #feff77
+  color: #feff77;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 nav {
   background-color: #57bdfb;
