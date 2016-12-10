@@ -19,6 +19,7 @@ nav {
 }
 nav a{
   color: #ffdb00;
+  text-decoration: none;
 }
 nav a:visited {
   color: #ffdb00;
