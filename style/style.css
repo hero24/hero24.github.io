@@ -12,7 +12,8 @@ body {
 }
 nav {
   background-color: #57bdfb;
-  border-left: solid #ff5739 2px;
+  border-left: solid #fdfa56 4px;
+  border-radius: 5px; 
 }
 nav a{
   color: #ffdb00;
