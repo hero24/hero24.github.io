@@ -9,8 +9,10 @@
 					var repoRequest = new XMLHttpRequest();
 					repoRequest.onreadystatechange = function(){
 						if(this.readyState == XMLHttpRequest.DONE){
-							var node = document.createElement('p');
-							node.appendChild(document.createTextNode(JSON.parse(this.responseText).html_url));
+							var repo = JSON.parse(this.responseText);
+							var node = document.createElement('a');
+							node.setAttribute('href',repo.html_url);
+							node.appendChild(document.createTextNode(repo.name));
 							working_on.appendChild(node);
 						}
 					};
