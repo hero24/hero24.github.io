@@ -2,7 +2,7 @@
 	document.addEventListener("DOMContentLoaded",function(){
 		var httpRequest = new XMLHttpRequest();
 		httpRequest.onreadystatechange = function(){
-			if(this.readyState === XMLHttpRequest.DONE && this.status === 200){
+			if(this.readyState === XMLHttpRequest.DONE){
 				alert(httpRequest.responseText);
 			}
 		};
