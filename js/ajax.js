@@ -7,7 +7,7 @@
 				var working_on = document.getElementById("working_on");
 				for(var i = 0;i<data.length;i++){
 					var repoRequest = new XMLHttpRequest();
-					repoRequest.onreadystatechange = function{
+					repoRequest.onreadystatechange = function(){
 						if(this.readyState == XMLHttpRequest.DONE){
 							var node = document.createElement('p');
 							node.appendChild(document.createTextNode(JSON.parse(this.responseText).html_url));
