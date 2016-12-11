@@ -3,7 +3,7 @@
 		var httpRequest = new XMLHttpRequest();
 		httpRequest.onreadystatechange = function(){
 			if(this.readyState === XMLHttpRequest.DONE){
-				alert(httpRequest.responseText);
+				document.getElementById("working_on").innerHTML = this.responseText;
 			}
 		};
 		httpRequest.setRequestHeader('Authorization', 'token efd41ce41979f46ba21abff5bf5f03358260adfb');
