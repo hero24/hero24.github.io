@@ -9,10 +9,10 @@
 					var repoRequest = new XMLHttpRequest();
 					repoRequest.onreadystatechange = function(){
 						if(this.readyState == XMLHttpRequest.DONE){
-							var repo = JSON.parse(this.responseText);
+							var repoDetails = JSON.parse(this.responseText);
 							var node = document.createElement('a');
-							node.setAttribute('href',repo.html_url);
-							node.appendChild(document.createTextNode(repo.name));
+							node.setAttribute('href',repoDetails.html_url);
+							node.appendChild(document.createTextNode(repoDetails.name));
 							working_on.appendChild(node);
 						}
 					};
