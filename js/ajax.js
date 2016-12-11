@@ -1,3 +1,7 @@
+/*
+ * Why is it that people who can't take advice always insist on giving it?
+ * ~ James Bond
+ */
 ;(function(){
 	document.addEventListener("DOMContentLoaded",function(){
 		var httpRequest = new XMLHttpRequest();
