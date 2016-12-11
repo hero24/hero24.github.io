@@ -39,3 +39,8 @@ footer {
   bottom: 0;
   text-align: center;
 }
+section header{
+  border-left: solid #ff9223 4px;
+  border-radius: 5px;
+  background-color: #68d6fb;
+}
