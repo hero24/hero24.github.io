@@ -4,8 +4,11 @@
 		httpRequest.onreadystatechange = function(){
 			if(this.readyState === XMLHttpRequest.DONE){
 				var data = JSON.parse(this.responseText);
+				var working_on = document.getElementById("working_on");
 				for(var i = 0;i<data.length;i++){
-					document.getElementById("working_on").appendChild(document.createTextNode('<p>'+data[i].repo.url+'</p>'));
+					var node = document.createElement('p');
+					node.appendChild(document.createTextNode(data[i].repo.url));
+					working_on.appendChild(node);
 				}
 			}
 		};
