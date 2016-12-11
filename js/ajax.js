@@ -6,9 +6,13 @@
 				var data = JSON.parse(this.responseText);
 				var working_on = document.getElementById("working_on");
 				for(var i = 0;i<data.length;i++){
-					var node = document.createElement('p');
-					node.appendChild(document.createTextNode(data[i].repo.url));
-					working_on.appendChild(node);
+					this.open('GET',data[i].repo.url + 'client_id=e60a7d85f37e798afe66',true);
+					this.send(null);
+					if(this.readyState == XMLHttpRequest.DONE){
+						var node = document.createElement('p');
+						node.appendChild(document.createTextNode(JSON.parse(this.responseText).html_url));
+						working_on.appendChild(node);
+					}
 				}
 			}
 		};
