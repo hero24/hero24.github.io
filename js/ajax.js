@@ -7,7 +7,7 @@
 				var working_on = document.getElementById("working_on");
 				var linked = [];
 				for(var i = 0;i<data.length;i++){
-					if(!linked.find((function(element){
+					if(!linked.find(function(element){
 						return element === data[i].repo.url;
 					};))){
 						linked.push(data[i].repo.url);
