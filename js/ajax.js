@@ -10,19 +10,18 @@
 					repoRequest.onreadystatechange = function(){
 						if(this.readyState == XMLHttpRequest.DONE){
 							var repoDetails = JSON.parse(this.responseText);
-							console.log(repoDetails);
 							var node = document.createElement('a');
 							node.setAttribute('href',repoDetails.html_url);
 							node.appendChild(document.createTextNode(repoDetails.name));
 							working_on.appendChild(node);
 						}
 					};
-					repoRequest.open('GET',data[i].repo.url + '?client_id=e60a7d85f37e798afe66',true);
+					repoRequest.open('GET',data[i].repo.url + ,true);
 					repoRequest.send(null);
 				}
 			}
 		};
-		httpRequest.open('GET', 'https://api.github.com/users/hero24/events/public?client_id=e60a7d85f37e798afe66&type=owner', true);
+		httpRequest.open('GET', 'https://api.github.com/users/hero24/events/public?type=owner', true);
 		httpRequest.send(null);
 	},false);
 })();
