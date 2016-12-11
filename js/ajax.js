@@ -13,12 +13,11 @@
 						repoRequest.onreadystatechange = function(){
 							if(this.readyState == XMLHttpRequest.DONE){
 								var repoDetails = JSON.parse(this.responseText);
-								console.log(repoDetails);
 								var node = document.createElement('a');
 								node.setAttribute('href',repoDetails.html_url);
-								console.log(node);
 								node.appendChild(document.createTextNode(repoDetails.name));
 								working_on.appendChild(node);
+								working_on.appendChild(document.createElement('br'));
 							}
 						};
 						repoRequest.open('GET',data[i].repo.url,true);
