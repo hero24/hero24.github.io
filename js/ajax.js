@@ -5,7 +5,7 @@
 			if(this.readyState === XMLHttpRequest.DONE){
 				var data = JSON.parse(this.responseText);
 				for(var i = 0;i<data.length;i++){
-					document.getElementById("working_on").appendChild(document.createTextNode('<br />'+data[i].repo.url));
+					document.getElementById("working_on").appendChild(document.createTextNode('<p>'+data[i].repo.url+'</p>'));
 				}
 			}
 		};
