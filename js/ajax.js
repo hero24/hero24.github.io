@@ -18,7 +18,7 @@
 							working_on.appendChild(node);
 						}
 					};
-					repoRequest.open('GET',data[i].repo.url + ,true);
+					repoRequest.open('GET',data[i].repo.url,true);
 					repoRequest.send(null);
 				}
 			}
