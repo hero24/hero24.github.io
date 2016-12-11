@@ -4,7 +4,7 @@
 		httpRequest.onreadystatechange = function(){
 			if(this.readyState === XMLHttpRequest.DONE){
 				var data = JSON.parse(this.responseText);
-				document.getElementById("working_on").innerHTML = data[0].repo;
+				document.getElementById("working_on").innerHTML = data[0].repo.url;
 			}
 		};
 		httpRequest.open('GET', 'https://api.github.com/users/hero24/events/public?client_id=e60a7d85f37e798afe66&type=owner', true);
