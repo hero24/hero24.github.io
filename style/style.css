@@ -13,24 +13,24 @@ http://www.color-hex.com/color-palette/27447
 http://www.color-hex.com/color-palette/27361
  */
 body {
-  background-color: #7bcdff;
-  color: #feff77;
+  background-color: black;
+  color: #ffdb00;
   margin-bottom: 0;
   padding-bottom: 0;
   height: 100%;
   position: relative;
 }
 nav {
-  background-color: #57bdfb;
+  background-color: #fff96a;
   border-left: solid #fdfa56 4px;
   border-radius: 5px; 
 }
 nav a{
-  color: #ffdb00;
+  color: #ff5739;
   text-decoration: none;
 }
 nav a:visited {
-  color: #ffdb00;
+  color: #ff5739;
 }
 section {
   float:left;
@@ -46,5 +46,5 @@ footer {
 section header{
   border-left: solid #ff9223 4px;
   border-radius: 5px;
-  background-color: #68d6fb;
+  background-color: #ff5739;
 }
