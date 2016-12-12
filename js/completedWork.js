@@ -13,9 +13,9 @@
               if(JSON.parse(this.responseText).length > 0){
                 completed = true;
               }
-            }
-            if(completed){
-              completedWork.innerHTML += incomingData[i].html_url;
+              if(completed){
+                completedWork.innerHTML += incomingData[i].html_url;
+              }
             }
           };
           statusQuery.open('GET',incomingData[i].releases_url.replace('{/id}',''),true);
