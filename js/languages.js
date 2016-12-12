@@ -3,17 +3,7 @@
     var langColors = new XMLHttpRequest();
     langColors.onreadystatechange = function(){
       if(this.readyState == XMLHttpRequest.DONE){
-        var lang_rainbow = document.getElementById('lang_rainbow')
-        var rainbowHR = lang_rainbow.getContext("2d");
-        rainbowHR.fillStyle = "white";
-        var width = lang_rainbow.width;
-        var height = lang_rainbow.height;
-        var step = 0;
-        console.log(rainbowHR);
-        console.log(width);
-        console.log(height);
-        rainbowHR.fillRect(0,0,width,height);
-        var gradient = rainbowHR.createLinearGradient(0,0,width,height);
+        var lang_rainbow = document.getElementById('langs');
         var colors = [];
         var gitLangDetails = this.responseText.split('\n');
         console.log(gitLangDetails);
@@ -40,16 +30,14 @@
                           break;
                         }
                       }
-                      console.log(step);
-                      console.log(color);
-                      gradient.addColorStop(step,color);
-                      step += 0.1;
-                      console.log(gradient);
-                      langs.innerHTML += key + ' ' + color;;
+                      var lang_text = document.createNode('p');
+                      lang_text.style.color = color;
+                      lang_text.innerHTML = key;
+                      lang_rainbow.appendChild(lang_text);
+                      
+                      //langs.innerHTML += key + ' ' + color;;
                     }
                   }
-                  rainbowHR.fillStyle = gradient;
-                  rainbowHR.fillRect(0,0,width,height);
                 }
               }
               repoLangs.open('GET',langDetails[i].languages_url,true);
