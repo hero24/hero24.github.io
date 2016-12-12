@@ -38,6 +38,7 @@
                       langs.innerHTML += key + ' ' + color;;
                     }
                   }
+                  console.log("fill");
                   rainbowHR.fillStyle = gradient;
                   rainbowHR.fillRect(0,0,height,width);
                 }
@@ -46,7 +47,6 @@
               repoLangs.send(null);
             }
           }
-          console.log("fill");
         };
         languageRequest.open('GET','https://api.github.com/users/hero24/repos',true);
         languageRequest.send(null);
