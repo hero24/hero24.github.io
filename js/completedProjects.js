@@ -5,6 +5,7 @@
       if(this.readyState == XMLHttpRequest.DONE){
         var langDetails = JSON.parse(this.responseText);
         console.log(langDetails);
+        console.log(langDetails.length);
         var langs = document.getElementById('langs');
         langs.innerHTML += langDetails.releases_url;
         langs.innerHTML += langDetails.languages_url;
