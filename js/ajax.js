@@ -26,6 +26,16 @@
 						};
 						repoRequest.open('GET',data[i].repo.url,true);
 						repoRequest.send(null);
+						var languageRequest = new XMLHttpRequest();
+						languageRequest.onreadystatechange = function(){
+							if(this.readyState == XMLHttpRequest.DONE){
+								var langDetails = JSON.parse(this.responseText);
+                                var languages = document.getElementById('langugages');
+                                langugaes.innerHTML += this.responseText;
+							}
+						};
+						languageRequest.open('GET','https://api.github.com/repos/'+data[i].repo.name+'/languages',true);
+						languageRequest.send(null);
 					}
 				}
 			}
