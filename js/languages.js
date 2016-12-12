@@ -41,6 +41,7 @@
                         }
                       }
                       console.log(step);
+                      console.log(color);
                       gradient.addColorStop(step,color);
                       step += 0.1;
                       console.log(gradient);
