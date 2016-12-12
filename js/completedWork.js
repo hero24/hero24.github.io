@@ -6,18 +6,15 @@
       if(this.readyState == XMLHttpRequest.DONE){
         var incomingData = JSON.parse(this.responseText);
         for(var i = 0;i<incomingData.length;i++){
-          var completed = false;
           var statusQuery = new XMLHttpRequest();
           statusQuery.onreadystatechange = function(){
             if(this.readyState == XMLHttpRequest.DONE){
               var responseJSON = JSON.parse(this.responseText);
-              if(responseJSON.length > 0){
-                completed = true;
-              }
-              if(completed){
-                console.log(incomingData);
-                // instead of using incomingData check releases
-                completedWork.innerHTML += responseJSON[0].html_url;
+              for(var i = 0; i < responseJSON.length;i++){
+                var link = document.createElement('a');
+                link.href = responseJSON[i].html_url;
+                link.appendChild(document.createTextNode(responseJSON[i].name));
+                completedWork.appendChild(link);
               }
             }
           };
