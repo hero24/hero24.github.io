@@ -1,5 +1,5 @@
 ;(function(){
-  document.addEventListner("DOMContentLoaded",function(){
+  document.addEventListener("DOMContentLoaded",function(){
     var completedWork = document.getElementById('completed');
     var repoRequest = new XMLHttpRequest();
     repoRequest.onreadystatechange = function(){
