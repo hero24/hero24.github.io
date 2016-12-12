@@ -4,8 +4,8 @@
     langColors.onreadystatechange = function(){
       if(this.readyState == XMLHttpRequest.DONE){
         var rainbowHR = document.getElementById('lang_rainbow').getContext("2d");
-        var width = document.getElementById('hr_rainbow').getWidth();
-        var height = document.getElementById('hr_rainbow').getHeight();
+        var width = document.getElementById('lang_rainbow').getWidth();
+        var height = document.getElementById('lang_rainbow').getHeight();
         var gradient = rainbowHR.createLinearGradient(0,0,height,width);
         var colors = [];
         var gitLangDetails = this.responseText.split('\n');
