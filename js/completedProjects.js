@@ -4,7 +4,8 @@
     langColors.onreadystatechange = function(){
       if(this.readyState == XMLHttpRequest.DONE){
         var colors = [];
-        var gitLangDetails = this.responseText.split('\n');
+        gitLangDetails = /(.*.:.*.*)/.exec(this.responseText);
+        //var gitLangDetails = this.responseText.split('\n');
         console.log(gitLangDetails);
         var languageRequest = new XMLHttpRequest();
         languageRequest.onreadystatechange = function(){
