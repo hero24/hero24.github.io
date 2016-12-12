@@ -40,7 +40,6 @@
                   }
                   console.log(lang); 
                   console.log(color);
-                  //langs.innerHTML += langDetails[i].releases_url;
                 }
               }
               repoLangs.open('GET',langDetails[i].languages_url,true);
