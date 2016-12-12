@@ -10,13 +10,14 @@
           var statusQuery = new XMLHttpRequest();
           statusQuery.onreadystatechange = function(){
             if(this.readyState == XMLHttpRequest.DONE){
-              if(JSON.parse(this.responseText).length > 0){
+              var responseJSON = JSON.parse(this.responseText);
+              if(responseJSON.length > 0){
                 completed = true;
               }
               if(completed){
                 console.log(incomingData);
                 // instead of using incomingData check releases
-                completedWork.innerHTML += incomingData[i].html_url;
+                completedWork.innerHTML += responseJSON[0].html_url;
               }
             }
           };
