@@ -16,17 +16,24 @@
               repoLangs.onreadystatechange = function(){
                 if(this.readyState == XMLHttpRequest.DONE){
                   var lang = JSON.parse(this.responseText);
+                  var color;
                   for (var key in lang) {
                     if (lang.hasOwnProperty(key)){
-                      for(var k = 0;k<gitLangDetails.length;k++){
+                      for(var k = 0, found = false;k<gitLangDetails.length;k++){
                         console.log(gitLangDetails[k].contains(key));
                         if(gitLangDetails[k].includes(key)){
+                          found = true
                           langs.innerHTML += this.responseText;
+                        }
+                        if(found && gitLangDetails[k].includes("color:")){
+                          color = gitLangDetails[k];
+                          break;
                         }
                       }
                     }
                   }
-                  console.log(lang);                  
+                  console.log(lang); 
+                  console.log(color);
                   //langs.innerHTML += langDetails[i].releases_url;
                 }
               }
