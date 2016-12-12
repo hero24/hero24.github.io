@@ -53,6 +53,7 @@ section header{
   border-radius: 5px;
   padding: 0em;
   border: 0em;
+  margin-top: 0em;
 }
 #working_on a,#completed a{
   color: #ff9223;
