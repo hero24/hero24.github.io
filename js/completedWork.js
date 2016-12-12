@@ -8,7 +8,7 @@
         for(var i = 0;i<incomingData.length;i++){
           var completed = false;
           var statusQuery = new XMLHttpRequest();
-          statusQuery.onreadystatechange = function(){
+          statusQuery.onreadystatechange = function(incomingData){
             if(this.readyState == XMLHttpRequest.DONE){
               if(JSON.parse(this.responseText).length > 0){
                 completed = true;
