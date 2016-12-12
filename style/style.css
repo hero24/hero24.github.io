@@ -48,9 +48,11 @@ section header{
   border-radius: 5px;
   background-color: #ff5739;
 }
+#working_on, #completed{
+  background-color: #3f3f3f;
+}
 #working_on a,#completed a{
   color: #ff9223;
-  background-color: #3f3f3f;
 }
 canvas {
   width : 100%;
