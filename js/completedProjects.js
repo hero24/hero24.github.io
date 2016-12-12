@@ -12,6 +12,6 @@
     languageRequest.open('GET','https://api.github.com/users/hero24/repos',true);
     languageRequest.send(null);
   },false);
-}})();
+})();
 // 
 
