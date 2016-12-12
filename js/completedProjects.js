@@ -3,8 +3,8 @@
     var langColors = new XMLHttpRequest();
     langColors.onreadystatechange = function(){
       if(this.readyState == XMLHttpRequest.DONE){
-        var rainbowHR = document.getElementById('lang_rainbow');
-        rainbowHR.style.backgroundImage = "linear-gradient(";
+        var rainbowHR = document.getElementById('lang_rainbow').getContext("2d");
+        var gradient = rainbowHR.createLinearGradient(0,0,2,document.width)
         var colors = [];
         var gitLangDetails = this.responseText.split('\n');
         console.log(gitLangDetails);
@@ -31,11 +31,10 @@
                           break;
                         }
                       }
-                      rainbowHR.style.backgroundImage += color+',';
+                      gradient.addColorStop(i/10,color);
                       langs.innerHTML += key + ' ' + color;;
                     }
                   }
-                  rainbowHR.style.backgroundImage += color + '));';
                   console.log(lang); 
                   console.log(color);
                   //langs.innerHTML += langDetails[i].releases_url;
@@ -45,6 +44,8 @@
               repoLangs.send(null);
             }
           }
+          rainbowHR.fillStyle = gradient;
+          rainbowHR.fillRect(0,0,2,document.width);
         };
         languageRequest.open('GET','https://api.github.com/users/hero24/repos',true);
         languageRequest.send(null);
