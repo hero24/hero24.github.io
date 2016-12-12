@@ -5,7 +5,7 @@
       if(this.readyState == XMLHttpRequest.DONE){
         var lang_rainbow = document.getElementById('lang_rainbow')
         var rainbowHR = lang_rainbow.getContext("2d");
-        rainbowHR.fillColor = "white";
+        rainbowHR.fillStyle = "white";
         var width = lang_rainbow.width;
         var height = lang_rainbow.height;
         console.log(rainbowHR);
