@@ -6,7 +6,6 @@
         var lang_rainbow = document.getElementById('langs');
         var colors = [];
         var gitLangDetails = this.responseText.split('\n');
-        console.log(gitLangDetails);
         var languageRequest = new XMLHttpRequest();
         languageRequest.onreadystatechange = function(){
           if(this.readyState == XMLHttpRequest.DONE){
@@ -21,7 +20,6 @@
                   for (var key in lang) {
                     if (lang.hasOwnProperty(key)){
                       for(var k = 0, found = false;k<gitLangDetails.length;k++){
-                        console.log(gitLangDetails[k]===key+':');
                         if(gitLangDetails[k]===key+':'){
                           found = true
                         }
