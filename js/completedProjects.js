@@ -21,15 +21,15 @@
                     if (lang.hasOwnProperty(key)){
                       for(var k = 0, found = false;k<gitLangDetails.length;k++){
                         console.log(gitLangDetails[k]===key+':');
-                        if(gitLangDetails[k].includes(key)){
+                        if(gitLangDetails[k]===key+':'){
                           found = true
-                          langs.innerHTML += this.responseText;
                         }
                         if(found && gitLangDetails[k].includes("color:")){
                           color = gitLangDetails[k];
                           break;
                         }
                       }
+                      langs.innerHTML += key + ' ' + color;;
                     }
                   }
                   console.log(lang); 
