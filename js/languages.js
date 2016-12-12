@@ -30,12 +30,13 @@
                           break;
                         }
                       }
-                      var lang_text = document.createElement('p');
-                      lang_text.style.color = color;
-                      lang_text.innerHTML = key;
-                      lang_rainbow.appendChild(lang_text);
-                      
-                      //langs.innerHTML += key + ' ' + color;;
+                      if(!colors.includes(key)){
+                        colors.push(key);
+                        var lang_text = document.createElement('p');
+                        lang_text.style.color = color;
+                        lang_text.innerHTML = key;
+                        lang_rainbow.appendChild(lang_text);
+                      }
                     }
                   }
                 }
@@ -53,5 +54,3 @@
     langColors.send(null);
   },false);
 })();
-// 
-
