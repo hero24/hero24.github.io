@@ -7,7 +7,7 @@
         var rainbowHR = lang_rainbow.getContext("2d");
         var width = lang_rainbow.width;
         var height = lang_rainbow.height;
-        var gradient = rainbowHR.createLinearGradient(0,0,height,width);
+        var gradient = rainbowHR.createLinearGradient(0,0,width,height);
         var colors = [];
         var gitLangDetails = this.responseText.split('\n');
         console.log(gitLangDetails);
@@ -35,12 +35,12 @@
                         }
                       }
                       gradient.addColorStop(i/10,color);
+                      console.log("fill");
+                      rainbowHR.fillStyle = gradient;
+                      rainbowHR.fillRect(0,0,width,height);
                       langs.innerHTML += key + ' ' + color;;
                     }
                   }
-                  console.log("fill");
-                  rainbowHR.fillStyle = gradient;
-                  rainbowHR.fillRect(0,0,height,width);
                 }
               }
               repoLangs.open('GET',langDetails[i].languages_url,true);
