@@ -8,13 +8,14 @@
         for(var i = 0;i<incomingData.length;i++){
           var completed = false;
           var statusQuery = new XMLHttpRequest();
-          statusQuery.onreadystatechange = function(incomingData){
+          statusQuery.onreadystatechange = function(){
             if(this.readyState == XMLHttpRequest.DONE){
               if(JSON.parse(this.responseText).length > 0){
                 completed = true;
               }
               if(completed){
-                console.log(incomingData[i]);
+                console.log(incomingData);
+                // instead of using incomingData check releases
                 completedWork.innerHTML += incomingData[i].html_url;
               }
             }
