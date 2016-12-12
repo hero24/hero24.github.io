@@ -1,5 +1,6 @@
 ;(function(){
   document.addEventListener("DOMContentLoaded",function(){
+    console.log("ldl");
     var languageRequest = new XMLHttpRequest();
     languageRequest.onreadystatechange = function(){
       if(this.readyState == XMLHttpRequest.DONE){
