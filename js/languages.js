@@ -30,7 +30,7 @@
                           break;
                         }
                       }
-                      var lang_text = document.createNode('p');
+                      var lang_text = document.createElement('p');
                       lang_text.style.color = color;
                       lang_text.innerHTML = key;
                       lang_rainbow.appendChild(lang_text);
