@@ -40,7 +40,7 @@
                         }
                       }
                       gradient.addColorStop(i/10,color);
-                      console.log("fill");
+                      console.log(gradient);
                       rainbowHR.fillStyle = gradient;
                       rainbowHR.fillRect(0,0,width,height);
                       langs.innerHTML += key + ' ' + color;;
