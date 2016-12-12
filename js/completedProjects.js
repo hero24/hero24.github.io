@@ -4,7 +4,9 @@
     langColors.onreadystatechange = function(){
       if(this.readyState == XMLHttpRequest.DONE){
         var rainbowHR = document.getElementById('lang_rainbow').getContext("2d");
-        var gradient = rainbowHR.createLinearGradient(0,0,2,100)
+        var width = document.getElementById('hr_rainbow').getWidth();
+        var height = document.getElementById('hr_rainbow').getHeight();
+        var gradient = rainbowHR.createLinearGradient(0,0,height,width);
         var colors = [];
         var gitLangDetails = this.responseText.split('\n');
         console.log(gitLangDetails);
@@ -45,7 +47,7 @@
             }
           }
           rainbowHR.fillStyle = gradient;
-          rainbowHR.fillRect(0,0,2,100);
+          rainbowHR.fillRect(0,0,height,width);
         };
         languageRequest.open('GET','https://api.github.com/users/hero24/repos',true);
         languageRequest.send(null);
