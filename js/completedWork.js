@@ -14,6 +14,7 @@
                 completed = true;
               }
               if(completed){
+                console.log(incomingData[i]);
                 completedWork.innerHTML += incomingData[i].html_url;
               }
             }
