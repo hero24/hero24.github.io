@@ -11,7 +11,8 @@
         console.log(rainbowHR);
         console.log(width);
         console.log(height);
-        var gradient = rainbowHR.fillRect(0,0,width,height);
+        rainbowHR.fillRect(0,0,width,height);
+        var gradient = rainbowHR.createLinearGradient(0,0,width,height);
         var colors = [];
         var gitLangDetails = this.responseText.split('\n');
         console.log(gitLangDetails);
