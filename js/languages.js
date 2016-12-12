@@ -39,6 +39,7 @@
                           break;
                         }
                       }
+                      console.log(i/10);
                       gradient.addColorStop(i/10,color);
                       console.log(gradient);
                       rainbowHR.fillStyle = gradient;
