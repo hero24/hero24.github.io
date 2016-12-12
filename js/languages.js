@@ -44,11 +44,11 @@
                       gradient.addColorStop(step,color);
                       step += 0.1;
                       console.log(gradient);
-                      rainbowHR.fillStyle = gradient;
-                      rainbowHR.fillRect(0,0,width,height);
                       langs.innerHTML += key + ' ' + color;;
                     }
                   }
+                  rainbowHR.fillStyle = gradient;
+                  rainbowHR.fillRect(0,0,width,height);
                 }
               }
               repoLangs.open('GET',langDetails[i].languages_url,true);
