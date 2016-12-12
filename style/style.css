@@ -47,14 +47,12 @@ section header{
   border-left: solid #ff9223 4px;
   border-radius: 5px;
   background-color: #ff5739;
-  margin-top: 0em;
 }
 #working_on, #completed{
   background-color: #3f3f3f;
   border-radius: 5px;
   padding: 0em;
   border: 0em;
-  margin-top: 0em;
 }
 #working_on a,#completed a{
   color: #ff9223;
@@ -62,4 +60,7 @@ section header{
 canvas {
   width : 100%;
   height: 10px;
+}
+h3 {
+  margin-top: 0em;
 }
