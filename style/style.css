@@ -50,6 +50,7 @@ section header{
 }
 #working_on a,#completed a{
   color: #ff9223;
+  background-color: #3f3f3f;
 }
 canvas {
   width : 100%;
