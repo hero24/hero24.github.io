@@ -27,7 +27,7 @@
                           found = true
                         }
                         if(found && gitLangDetails[k].includes("color:")){
-                          color = gitLangDetails[k].split('"")[1];
+                          color = gitLangDetails[k].split('"')[1];
                           break;
                         }
                       }
