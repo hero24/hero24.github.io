@@ -4,7 +4,6 @@
     langColors.onreadystatechange = function(){
       if(this.readyState == XMLHttpRequest.DONE){
         var colors = [];
-        var rawGitLangDetails = this.responseText;
         var gitLangDetails = this.responseText.split('\n');
         console.log(gitLangDetails);
         var languageRequest = new XMLHttpRequest();
@@ -18,12 +17,16 @@
                 if(this.readyState == XMLHttpRequest.DONE){
                   var lang = JSON.parse(this.responseText);
                   for (var key in lang) {
-                    if (lang.hasOwnProperty(key) && rawGitLangDetails.contains(key)) {
-                      console.log(key + " -> " + lang[key]);
+                    if (lang.hasOwnProperty(key)){
+                      for(var k = 0;k<gitLangDetails.length;k++){
+                        console.log(gitLangDetails[k].contains(key));
+                        if(gitLangDetails[k].contains(key)){
+                          langs.innerHTML += this.responseText;
+                        }
+                      }
                     }
                   }
-                  console.log(lang);
-                  langs.innerHTML += this.responseText;
+                  console.log(lang);                  
                   //langs.innerHTML += langDetails[i].releases_url;
                 }
               }
