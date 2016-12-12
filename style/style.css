@@ -47,6 +47,7 @@ section header{
   border-left: solid #ff9223 4px;
   border-radius: 5px;
   background-color: #ff5739;
+  margin-top: 0em;
 }
 #working_on, #completed{
   background-color: #3f3f3f;
