@@ -46,6 +46,7 @@
               repoLangs.send(null);
             }
           }
+          console.log("fill";
           rainbowHR.fillStyle = gradient;
           rainbowHR.fillRect(0,0,height,width);
         };
