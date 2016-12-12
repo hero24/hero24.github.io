@@ -20,7 +20,7 @@
                     if (lang.hasOwnProperty(key)){
                       for(var k = 0;k<gitLangDetails.length;k++){
                         console.log(gitLangDetails[k].contains(key));
-                        if(gitLangDetails[k].contains(key)){
+                        if(gitLangDetails[k].includes(key)){
                           langs.innerHTML += this.responseText;
                         }
                       }
