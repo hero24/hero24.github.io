@@ -3,6 +3,8 @@
     var langColors = new XMLHttpRequest();
     langColors.onreadystatechange = function(){
       if(this.readyState == XMLHttpRequest.DONE){
+        var rainbowHR = document.getElementById('lang_rainbow');
+        rainbowHR.style.backgroundImage = "linear-gradient(";
         var colors = [];
         var gitLangDetails = this.responseText.split('\n');
         console.log(gitLangDetails);
@@ -29,9 +31,11 @@
                           break;
                         }
                       }
+                      rainbowHR.style.backgroundImage += color+',';
                       langs.innerHTML += key + ' ' + color;;
                     }
                   }
+                  rainbowHR.style.backgroundImage += color + '));';
                   console.log(lang); 
                   console.log(color);
                   //langs.innerHTML += langDetails[i].releases_url;
