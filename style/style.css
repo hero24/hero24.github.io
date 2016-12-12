@@ -48,3 +48,7 @@ section header{
   border-radius: 5px;
   background-color: #ff5739;
 }
+canvas {
+  width : 100%;
+  height: 2px;
+}
