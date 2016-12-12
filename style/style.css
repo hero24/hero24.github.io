@@ -41,7 +41,7 @@ footer {
   clear: both;
   position: fixed;
   bottom: 0;
-  text-align: center;
+  width: 100%;
 }
 section header{
   border-left: solid #ff9223 4px;
