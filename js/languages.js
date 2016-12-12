@@ -8,6 +8,9 @@
         rainbowHR.fillColor = "white";
         var width = lang_rainbow.width;
         var height = lang_rainbow.height;
+        console.log(rainbowHR);
+        console.log(width);
+        console.log(height);
         var gradient = rainbowHR.fillRect(0,0,width,height);
         var colors = [];
         var gitLangDetails = this.responseText.split('\n');
