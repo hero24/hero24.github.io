@@ -50,6 +50,9 @@ section header{
 }
 #working_on, #completed{
   background-color: #3f3f3f;
+  border-radius: 5px;
+  padding: 0em;
+  border: 0em;
 }
 #working_on a,#completed a{
   color: #ff9223;
