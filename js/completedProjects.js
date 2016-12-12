@@ -6,7 +6,8 @@
       if(this.readyState == XMLHttpRequest.DONE){
         var langDetails = JSON.parse(this.responseText);
         var langs = document.getElementById('langs');
-        langs.innerHTML += this.responseText;
+        langs.innerHTML += langDetails.releases_url;
+        langs.innerHTML += langDetails.languages_url;
       }
     };
     languageRequest.open('GET','https://api.github.com/users/hero24/repos',true);
