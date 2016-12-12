@@ -38,8 +38,8 @@
                       langs.innerHTML += key + ' ' + color;;
                     }
                   }
-                  console.log(lang); 
-                  console.log(color);
+                  rainbowHR.fillStyle = gradient;
+                  rainbowHR.fillRect(0,0,height,width);
                 }
               }
               repoLangs.open('GET',langDetails[i].languages_url,true);
@@ -47,8 +47,6 @@
             }
           }
           console.log("fill");
-          rainbowHR.fillStyle = gradient;
-          rainbowHR.fillRect(0,0,height,width);
         };
         languageRequest.open('GET','https://api.github.com/users/hero24/repos',true);
         languageRequest.send(null);
