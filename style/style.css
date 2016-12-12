@@ -48,7 +48,7 @@ section header{
   border-radius: 5px;
   background-color: #ff5739;
 }
-#working_on a{
+#working_on a,#completed a{
   color: #ff9223;
 }
 canvas {
