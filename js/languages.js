@@ -5,6 +5,7 @@
       if(this.readyState == XMLHttpRequest.DONE){
         var lang_rainbow = document.getElementById('lang_rainbow')
         var rainbowHR = lang_rainbow.getContext("2d");
+        rainbowHR.fillColor = "white";
         var width = lang_rainbow.width;
         var height = lang_rainbow.height;
         var gradient = rainbowHR.createLinearGradient(0,0,width,height);
