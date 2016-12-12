@@ -16,7 +16,7 @@
               repoLangs.onreadystatechange = function(){
                 if(this.readyState == XMLHttpRequest.DONE){
                   langs.innerHTML += this.responseText;
-                  langs.innerHTML += langDetails[i].releases_url;
+                  langs.innerHTML += langDetails[i].relases_url;
                 }
               }
               repoLangs.open('GET',langDetails[i].languages_url,true);
