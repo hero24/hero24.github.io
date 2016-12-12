@@ -18,7 +18,7 @@
               completedWork.innerHTML += incomingData[i].html_url;
             }
           };
-          statusQuery.open('GET',incomingData[i].releases_url,true);
+          statusQuery.open('GET',incomingData[i].releases_url.replace('{/id}',''),true);
           statusQuery.send(null);
         }
       }
