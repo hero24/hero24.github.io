@@ -8,6 +8,7 @@
         rainbowHR.fillStyle = "white";
         var width = lang_rainbow.width;
         var height = lang_rainbow.height;
+        var step = 0;
         console.log(rainbowHR);
         console.log(width);
         console.log(height);
@@ -39,8 +40,9 @@
                           break;
                         }
                       }
-                      console.log(i/10);
-                      gradient.addColorStop(i/10,color);
+                      console.log(step);
+                      gradient.addColorStop(step,color);
+                      step += 0.1;
                       console.log(gradient);
                       rainbowHR.fillStyle = gradient;
                       rainbowHR.fillRect(0,0,width,height);
