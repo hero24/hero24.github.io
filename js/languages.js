@@ -1,3 +1,7 @@
+/*
+ * JavaScript is the world's most misunderstood programming language.
+ * ~ Douglas Crockford
+ */
 ;(function(){
   document.addEventListener("DOMContentLoaded",function(){
     var langColors = new XMLHttpRequest();
