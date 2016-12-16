@@ -36,6 +36,8 @@ section {
   float:left;
   width: 33%;
   text-align: center;
+  height: 50%;
+  overflow-y: scroll;
 }
 footer {
   clear: both;
