@@ -19,6 +19,7 @@ body {
   padding-bottom: 0;
   height: 100%;
   position: relative;
+  overflow: hidden;
 }
 nav {
   background-color: #fff96a;
@@ -37,6 +38,7 @@ section {
   width: 33%;
   text-align: center;
   height: 50%;
+  max-height: 50%;
   overflow-y: scroll;
 }
 footer {
