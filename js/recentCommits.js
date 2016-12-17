@@ -30,6 +30,7 @@
 						repoRequest.send(null);
 					}
 				}
+				document.remoteContentLoaded.workingOn = true;
 			}
 		};
 		httpRequest.open('GET', 'https://api.github.com/users/hero24/events/public?type=owner', true);
