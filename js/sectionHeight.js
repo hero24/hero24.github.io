@@ -8,7 +8,7 @@
     workingOn.style.height = height;
     completed.style.height = height;
     resources.style.height = height;
-    completed.setAttribute("style","height:"+height+";");
+    completed.setAttribute("style","height:"+height+"px;");
     console.log(height);
   },false);
 })();
