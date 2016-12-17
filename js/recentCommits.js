@@ -22,6 +22,7 @@
 								node.appendChild(document.createTextNode(repoDetails.name));
 								working_on.appendChild(node);
 								working_on.appendChild(document.createElement('br'));
+								var event = new Event("RemoteContentLoaded");
 							}
 						};
 						repoRequest.open('GET',data[i].repo.url,true);
