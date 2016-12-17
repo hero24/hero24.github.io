@@ -1,5 +1,5 @@
 ;(function(){
-  document.addEventListener('DOMContentLoaded',function(){
+  document.addEventListener('RemoteContentLoaded',function(){
     var workingOn = document.getElementById('working_on');
     var completed = document.getElementById('completed');
     var resources = document.getElementById('resources');
