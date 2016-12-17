@@ -23,6 +23,7 @@
 								working_on.appendChild(node);
 								working_on.appendChild(document.createElement('br'));
 								var event = new Event("RemoteContentLoaded");
+								document.remoteContentLoaded.workingOn = true;
 								document.dispatchEvent(event);
 							}
 						};
@@ -30,7 +31,6 @@
 						repoRequest.send(null);
 					}
 				}
-				document.remoteContentLoaded.workingOn = true;
 			}
 		};
 		httpRequest.open('GET', 'https://api.github.com/users/hero24/events/public?type=owner', true);
