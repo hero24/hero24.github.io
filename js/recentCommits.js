@@ -23,6 +23,7 @@
 								working_on.appendChild(node);
 								working_on.appendChild(document.createElement('br'));
 								var event = new Event("RemoteContentLoaded");
+								document.dispatchEvent(event);
 							}
 						};
 						repoRequest.open('GET',data[i].repo.url,true);
