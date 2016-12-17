@@ -20,6 +20,8 @@
                 link.appendChild(document.createTextNode(responseJSON[i].name));
                 completedWork.appendChild(link);
               }
+              var event = new Event("RemoteContentLoaded");
+						  document.dispatchEvent(event);
             }
           };
           statusQuery.open('GET',incomingData[i].releases_url.replace('{/id}',''),true);
