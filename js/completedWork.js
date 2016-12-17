@@ -21,7 +21,8 @@
                 completedWork.appendChild(link);
               }
               var event = new Event("RemoteContentLoaded");
-						  document.dispatchEvent(event);
+	      document.remoteContentLoaded.completed = true;
+	      document.dispatchEvent(event);
             }
           };
           statusQuery.open('GET',incomingData[i].releases_url.replace('{/id}',''),true);
