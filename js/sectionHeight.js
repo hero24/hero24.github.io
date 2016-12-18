@@ -9,6 +9,7 @@
       resources.setAttribute("style",'');
       var height = (workingOn.clientHeight > completed.clientHeight)? workingOn.clientHeight : completed.clientHeight;
       var height = (height > resources.clientHeight) ? height : resources.clientHeight;
+      height += 10;
       workingOn.style.height = height;
       completed.style.height = height;
       resources.style.height = height;
