@@ -4,6 +4,9 @@
       var workingOn = document.getElementById('working_on');
       var completed = document.getElementById('completed');
       var resources = document.getElementById('resources');
+      completed.setAttribute("style",'');
+      workingOn.setAttribute("style",'');
+      resources.setAttribute("style",'');
       var height = (workingOn.clientHeight > completed.clientHeight)? workingOn.clientHeight : completed.clientHeight;
       var height = (height > resources.clientHeight) ? height : resources.clientHeight;
       workingOn.style.height = height;
