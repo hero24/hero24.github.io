@@ -52,7 +52,7 @@ section header{
   border-radius: 5px;
   background-color: #ff5739;
 }
-#working_on, #completed{
+#working_on, #completed, #resources{
   background-color: #3f3f3f;
   border-radius: 5px;
   padding: 0em;
@@ -61,7 +61,7 @@ section header{
   max-height: 50%;
   min-height: 50%;
 }
-#working_on a,#completed a{
+#working_on a,#completed a,#resources a{
   color: #ff9223;
 }
 canvas {
