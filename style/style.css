@@ -71,3 +71,7 @@ canvas {
 h3 {
   margin-top: 0em;
 }
+#banner {
+    max-height: 33%;
+    width: 100%;
+}
