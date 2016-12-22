@@ -72,6 +72,7 @@ h3 {
   margin-top: 0em;
 }
 #banner {
-    max-height: 33%;
+    max-height: 23%;
+    border-radius: 5px;
     width: 100%;
 }
