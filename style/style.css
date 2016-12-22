@@ -53,7 +53,8 @@ section header{
   background-color: #ff5739;
 }
 #working_on, #completed, #resources{
-  background-color: #3f3f3f;
+  background-color: rgba(63,63,63,0.5); 
+    /*#3f3f3f*/;
   border-radius: 5px;
   padding: 0em;
   border: 0em;
@@ -75,4 +76,7 @@ h3 {
     max-height: 23%;
     border-radius: 5px;
     width: 100%;
+}
+#langs{
+    z-index: -1;
 }
