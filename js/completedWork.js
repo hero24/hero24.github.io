@@ -19,6 +19,7 @@
                 link.href = responseJSON[i].html_url;
                 link.appendChild(document.createTextNode(responseJSON[i].name));
                 completedWork.appendChild(link);
+		completedWork.appendChild(document.createElement('br');
               }
               var event = new Event("RemoteContentLoaded");
 	      document.remoteContentLoaded.completed = true;
